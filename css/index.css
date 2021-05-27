@@ -1,0 +1,229 @@
+.wrapper {
+    position: relative;
+    /* width: 1200px; */
+    height: 100%;
+    margin: 0 auto;
+    background: #222428;
+    padding-bottom: 100px;
+    /* background-color: #ff0; */
+}
+
+
+/* 头部的样式 */
+
+.wrapper .top {
+    display: flex;
+    justify-content: space-around;
+}
+
+.wrapper .top button {
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 2px solid grey;
+    cursor: pointer;
+}
+
+.wrapper .top button.act {
+    background-color: #f00;
+    color: #fff;
+}
+
+
+/* 分页按钮的样式 */
+
+.wrapper .page-button {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px auto;
+    padding: 20px;
+    border-bottom: 5px solid #f00;
+}
+
+.wrapper .page-button button {
+    text-align: center;
+    line-height: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+.wrapper .page-button button.act {
+    background-color: #f00;
+}
+
+
+/* 内容部分样式 */
+
+
+/* 每一个电影列表样式 */
+
+.wrapper .content .list {
+    position: relative;
+    /* width: 250px; */
+    height: 200px;
+    /* width: 23%; */
+    margin-top: 20px;
+    /* line-height: 30px; */
+    border: 2px grey solid;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.wrapper .content img {
+    float: left;
+    width: 46%;
+    height: 100%;
+    vertical-align: bottom;
+}
+
+
+/* 默认无图片的img样式 */
+
+.wrapper .content img.default {
+    width: 46%;
+    height: 100%;
+}
+
+
+/*右边介绍样式 */
+
+.wrapper .content p {
+    /* height: 30px; */
+    height: 22%;
+    font-size: 18px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-indent: 20px;
+}
+
+
+/* 详情内容 */
+
+.detail {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150%;
+    height: 1000px;
+    background-color: rgba(51, 51, 51, .6);
+}
+
+.detail .wrapper-detail {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 300px;
+    background-color: rgba(116, 184, 175, .8);
+    border: 2px solid grey;
+    border-radius: 20px;
+    box-shadow: 6px 6px 25px #000;
+    /* text-overflow: ellipsis; */
+    /* text-align: center; */
+    overflow: hidden;
+}
+
+.detail .wrapper-detail h1 {
+    font-size: 30px;
+    font-weight: bold;
+    height: 50px;
+    line-height: 50px;
+    text-indent: 20px;
+    color: antiquewhite;
+}
+
+.detail .wrapper-detail p {
+    margin-top: 20px;
+    font-size: 20px;
+    /* text-align: center; */
+    line-height: 25px;
+    color: whitesmoke;
+    /* white-space: nowrap; */
+    /* text-overflow: ellipsis; */
+}
+
+
+/* 动画样式 */
+
+.spinner-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    margin: -150px 0 0 -150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.configure-border-1 {
+    width: 115px;
+    height: 115px;
+    padding: 3px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffab91;
+    animation: configure-clockwise 3s ease-in-out 0s infinite alternate;
+}
+
+.configure-border-2 {
+    width: 115px;
+    height: 115px;
+    padding: 3px;
+    left: -115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(63, 249, 220);
+    transform: rotate(45deg);
+    animation: configure-xclockwise 3s ease-in-out 0s infinite alternate;
+}
+
+@keyframes configure-clockwise {
+    0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes configure-xclockwise {
+    0% {
+        transform: rotate(45deg);
+    }
+    25% {
+        transform: rotate(-45deg);
+    }
+    50% {
+        transform: rotate(-135deg);
+    }
+    75% {
+        transform: rotate(-225deg);
+    }
+    100% {
+        transform: rotate(-315deg);
+    }
+}
