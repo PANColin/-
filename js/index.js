@@ -40,6 +40,7 @@ function render(res) {
     //detail 插入详情内容
     var detailStr = `<h1>${res.title}</h1>
         <p>${res.summary}</p>`
+        // console.log(res.summary);
     $(".detail .wrapper-detail").html(detailStr);
     //  如果xhr.response.data.list存在的话下面才执行
     // 插入content内容
